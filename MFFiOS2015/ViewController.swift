@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        title = "MFF Map"
+        title = NSLocalizedString("mapScreen.title", value: "MFF Map", comment: "Map screen title")
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,4 +23,3 @@ class ViewController: UIViewController {
     }
 
 }
-
