@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		688601EF1C0E0F3D005449BC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688601EE1C0E0F3D005449BC /* MapKit.framework */; };
 		68EF23CE1C0DF7C500624F4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EF23CD1C0DF7C500624F4E /* AppDelegate.swift */; };
 		68EF23D01C0DF7C500624F4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EF23CF1C0DF7C500624F4E /* ViewController.swift */; };
 		68EF23D31C0DF7C500624F4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68EF23D11C0DF7C500624F4E /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		688601EE1C0E0F3D005449BC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		68EF23CA1C0DF7C500624F4E /* MFFiOS2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFFiOS2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68EF23CD1C0DF7C500624F4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68EF23CF1C0DF7C500624F4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688601EF1C0E0F3D005449BC /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		68EF23C11C0DF7C500624F4E = {
 			isa = PBXGroup;
 			children = (
+				688601EE1C0E0F3D005449BC /* MapKit.framework */,
 				68EF23CC1C0DF7C500624F4E /* MFFiOS2015 */,
 				68EF23E11C0DF7C600624F4E /* MFFiOS2015Tests */,
 				68EF23EC1C0DF7C600624F4E /* MFFiOS2015UITests */,
@@ -482,6 +486,7 @@
 				68EF23F41C0DF7C600624F4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68EF23F51C0DF7C600624F4E /* Build configuration list for PBXNativeTarget "MFFiOS2015Tests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				68EF23F71C0DF7C600624F4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68EF23F81C0DF7C600624F4E /* Build configuration list for PBXNativeTarget "MFFiOS2015UITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				68EF23FA1C0DF7C600624F4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
