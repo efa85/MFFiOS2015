@@ -22,7 +22,10 @@ enum PopularApplicationRetrieverResult {
 class PopularApplicationRetriever {
     
     func retrievePopularApplicationsWithCountryCode(countryCode: String, completion: (PopularApplicationRetrieverResult) -> Void) {
+        let app1 = Application(name: "A fantastic app", developer: "A factastic developer", price: "Free")
+        let app2 = Application(name: "A less fantastic app", developer: "A less factastic developer", price: "Free")
         
+        completion(.Success(applications: [app1, app2]))
     }
     
 }
