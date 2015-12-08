@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    let reverseCountryGeocoder = ReverseCountryGeocoder()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,8 +30,36 @@ class ViewController: UIViewController {
     @IBAction func mapViewTap(sender: UITapGestureRecognizer) {
         let point = sender.locationInView(mapView)
         let coordinate = mapView.convertPoint(point, toCoordinateFromView: mapView)
+        
+        addAnnotationForCoordinate(coordinate)
+        
+        reverseCountryGeocoder.reverseGeocodeCountryWithCoordinate(coordinate) { [weak self] (result) -> Void in
+            self?.handleReverseCountryGeocoderResult(result)
+        }
+    }
+    
+    private func handleReverseCountryGeocoderResult(result: ReverseCountryGeocoderResult) {
+        switch result {
+            case .Success(let country):
+                showAppsForCountry(country)
+            case .Failure(let error):
+                showError(error)
+        }
+    }
+    
+    private func showAppsForCountry(country: String) {
+        print(country)
+        // TODO:
+    }
+    
+    private func showError(error: NSError) {
+        // TODO:
+    }
+    
+    private func addAnnotationForCoordinate(coordinate: CLLocationCoordinate2D) {
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
+        
         mapView.removeAnnotations(mapView.annotations)
         mapView.addAnnotation(annotation)
     }
