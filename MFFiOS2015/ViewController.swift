@@ -12,7 +12,6 @@ import MapKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var appsButton: UIBarButtonItem!
     
     let reverseCountryGeocoder = ReverseCountryGeocoder()
     
@@ -21,7 +20,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         title = NSLocalizedString("mapScreen.title", value: "MFF Map", comment: "Map screen title")
-        appsButton.title = NSLocalizedString("mapScreen.popularAppsButtonText", value: "Popular Apps", comment: "")
     }
 
     override func didReceiveMemoryWarning() {
