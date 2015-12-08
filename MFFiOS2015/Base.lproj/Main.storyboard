@@ -33,8 +33,11 @@
                             <constraint firstItem="7pi-nH-agd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wZq-R9-aIY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Orm-w6-j8b"/>
+                    <navigationItem key="navigationItem" id="Orm-w6-j8b">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Item" id="02e-rk-f1N"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="appsButton" destination="02e-rk-f1N" id="AD9-J9-8QV"/>
                         <outlet property="mapView" destination="7pi-nH-agd" id="PVl-7X-I9t"/>
                     </connections>
                 </viewController>
