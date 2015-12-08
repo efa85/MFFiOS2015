@@ -45,7 +45,9 @@ class ViewController: UIViewController {
         switch result {
         case .Success(let countryCode):
             popularApplicationRetriever.retrievePopularApplicationsWithCountryCode(countryCode) { [weak self] (result) -> Void in
-                self?.handleApplicationRetrieverResult(result)
+                dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                    self?.handleApplicationRetrieverResult(result)
+                }
             }
         case .Failure(let error):
             showError(error)
