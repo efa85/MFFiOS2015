@@ -53,7 +53,15 @@ class ViewController: UIViewController {
     }
     
     private func showError(error: NSError) {
-        // TODO:
+        let title = NSLocalizedString("mapScreen.errorReverseGeocoding.title", value: "Error geocoding", comment: "Reverse geocoder error alert title")
+        let message = NSLocalizedString("mapScreen.errorReverseGeocoding.message", value: "Could not reverse geocode the location you selected", comment: "Reverse geocoder error alert message")
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        let actionTitle = NSLocalizedString("mapScreen.errorReverseGeocoding.buttonText", value: "OK", comment: "Reverse geocoder error alert button text")
+        let action = UIAlertAction(title: actionTitle, style: UIAlertActionStyle.Default, handler: nil)
+        alertController.addAction(action)
+        
+        presentViewController(alertController, animated: true, completion: nil)
     }
     
     private func addAnnotationForCoordinate(coordinate: CLLocationCoordinate2D) {
