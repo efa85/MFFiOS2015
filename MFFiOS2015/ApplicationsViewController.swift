@@ -29,10 +29,10 @@ class ApplicationsViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as! ApplicationTableViewCell
 
         let application = applications[indexPath.row]
-        cell.textLabel!.text = application.name
+        cell.application = application
 
         return cell
     }

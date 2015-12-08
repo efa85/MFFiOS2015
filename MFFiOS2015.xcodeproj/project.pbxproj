@@ -11,6 +11,7 @@
 		688601EF1C0E0F3D005449BC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688601EE1C0E0F3D005449BC /* MapKit.framework */; };
 		68BEB1FE1C174DA900376BC6 /* PopularApplicationRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BEB1FD1C174DA900376BC6 /* PopularApplicationRetriever.swift */; };
 		68BEB2001C17578C00376BC6 /* ApplicationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BEB1FF1C17578C00376BC6 /* ApplicationsViewController.swift */; };
+		68BEB2021C175C4D00376BC6 /* ApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BEB2011C175C4D00376BC6 /* ApplicationTableViewCell.swift */; };
 		68EF23CE1C0DF7C500624F4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EF23CD1C0DF7C500624F4E /* AppDelegate.swift */; };
 		68EF23D01C0DF7C500624F4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EF23CF1C0DF7C500624F4E /* ViewController.swift */; };
 		68EF23D31C0DF7C500624F4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68EF23D11C0DF7C500624F4E /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		688601EE1C0E0F3D005449BC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		68BEB1FD1C174DA900376BC6 /* PopularApplicationRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularApplicationRetriever.swift; sourceTree = "<group>"; };
 		68BEB1FF1C17578C00376BC6 /* ApplicationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationsViewController.swift; sourceTree = "<group>"; };
+		68BEB2011C175C4D00376BC6 /* ApplicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationTableViewCell.swift; sourceTree = "<group>"; };
 		68EF23CA1C0DF7C500624F4E /* MFFiOS2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFFiOS2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68EF23CD1C0DF7C500624F4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68EF23CF1C0DF7C500624F4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				68EF23CD1C0DF7C500624F4E /* AppDelegate.swift */,
 				68EF23CF1C0DF7C500624F4E /* ViewController.swift */,
 				68BEB1FF1C17578C00376BC6 /* ApplicationsViewController.swift */,
+				68BEB2011C175C4D00376BC6 /* ApplicationTableViewCell.swift */,
 				681A7F5C1C172A3F00D9BDE3 /* ReverseCountryGeocoder.swift */,
 				68BEB1FD1C174DA900376BC6 /* PopularApplicationRetriever.swift */,
 				68EF23D11C0DF7C500624F4E /* Main.storyboard */,
@@ -271,6 +274,7 @@
 			files = (
 				68EF23D01C0DF7C500624F4E /* ViewController.swift in Sources */,
 				68BEB1FE1C174DA900376BC6 /* PopularApplicationRetriever.swift in Sources */,
+				68BEB2021C175C4D00376BC6 /* ApplicationTableViewCell.swift in Sources */,
 				68EF23CE1C0DF7C500624F4E /* AppDelegate.swift in Sources */,
 				68BEB2001C17578C00376BC6 /* ApplicationsViewController.swift in Sources */,
 				681A7F5D1C172A3F00D9BDE3 /* ReverseCountryGeocoder.swift in Sources */,
