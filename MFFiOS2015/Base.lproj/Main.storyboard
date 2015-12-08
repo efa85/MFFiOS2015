@@ -36,6 +36,7 @@
                     <navigationItem key="navigationItem" id="Orm-w6-j8b"/>
                     <connections>
                         <outlet property="mapView" destination="7pi-nH-agd" id="PVl-7X-I9t"/>
+                        <segue destination="WNI-FJ-UPy" kind="show" identifier="ShowApplications" id="KkI-Wx-l1P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -46,6 +47,34 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1063" y="415"/>
+        </scene>
+        <!--Applications View Controller-->
+        <scene sceneID="POr-XR-Bz0">
+            <objects>
+                <tableViewController id="WNI-FJ-UPy" customClass="ApplicationsViewController" customModule="MFFiOS2015" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="abN-8r-rju">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Wow-xn-235">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wow-xn-235" id="DXu-kw-VPK">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WNI-FJ-UPy" id="rse-Hv-tPS"/>
+                            <outlet property="delegate" destination="WNI-FJ-UPy" id="MTe-Yz-3R0"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZPc-zT-qVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805" y="415"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qrf-Gj-sTV">

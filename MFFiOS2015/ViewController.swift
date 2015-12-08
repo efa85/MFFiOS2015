@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     let reverseCountryGeocoder = ReverseCountryGeocoder()
+    let popularApplicationRetriever = PopularApplicationRetriever()
+    var applications: [Application]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +23,11 @@ class ViewController: UIViewController {
         
         title = NSLocalizedString("mapScreen.title", value: "MFF Map", comment: "Map screen title")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let applicationsViewController = segue.destinationViewController as? ApplicationsViewController {
+            applicationsViewController.applications = applications
+        }
     }
 
     @IBAction func mapViewTap(sender: UITapGestureRecognizer) {
@@ -40,16 +43,28 @@ class ViewController: UIViewController {
     
     private func handleReverseCountryGeocoderResult(result: ReverseCountryGeocoderResult) {
         switch result {
-            case .Success(let country):
-                showAppsForCountry(country)
-            case .Failure(let error):
-                showError(error)
+        case .Success(let countryCode):
+            popularApplicationRetriever.retrievePopularApplicationsWithCountryCode(countryCode) { [weak self] (result) -> Void in
+                self?.handleApplicationRetrieverResult(result)
+            }
+        case .Failure(let error):
+            showError(error)
         }
     }
     
-    private func showAppsForCountry(country: String) {
-        print(country)
-        // TODO:
+    private func handleApplicationRetrieverResult(result: PopularApplicationRetrieverResult) {
+        switch result {
+        case .Success(let applications):
+            showApplications(applications)
+        case .Failure:
+            // TODO:
+            break
+        }
+    }
+    
+    private func showApplications(applications: [Application]) {
+        self.applications = applications
+        performSegueWithIdentifier("ShowApplications", sender: nil)
     }
     
     private func showError(error: NSError) {
