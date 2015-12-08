@@ -9,7 +9,7 @@
 import MapKit
 
 enum ReverseCountryGeocoderResult {
-    case Success(country: String)
+    case Success(countryCode: String)
     case Failure(error: NSError)
 }
 
@@ -31,13 +31,13 @@ class ReverseCountryGeocoder {
                 return
             }
             
-            guard let country = placemark.country else {
+            guard let countryCode = placemark.ISOcountryCode else {
                 let error = NSError(domain: ReverseCountryGeocoderDomain, code: ReverseCountryGeocoderNotACountryErrorCode, userInfo: nil)
                 completion(.Failure(error: error))
                 return
             }
                 
-            completion(.Success(country: country))
+            completion(.Success(countryCode: countryCode))
         }
     }
     
